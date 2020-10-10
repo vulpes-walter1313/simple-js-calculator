@@ -1,0 +1,130 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #14090C;
+    color: #FF1745;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Grid */
+.frame {
+    padding: 1em;
+    margin: 1em auto;
+    width: 80%;
+    height: 60%;
+    max-height: 900px;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+    "display display display display"
+    "ac ac ac divide"
+    "num7 num8 num9 mult"
+    "num4 num5 num6 subt"
+    "num1 num2 num3 addt"
+    "num0 num0 decimal equals";
+    gap: 5px 5px;
+    background-color: #b45b00;
+}
+#result {
+    grid-area: display;
+    
+}
+#ac-clear {
+    grid-area: ac;
+}
+#divide-cell {
+    grid-area: divide;
+}
+#num-seven {
+    grid-area: num7;
+}
+#num-eight {
+    grid-area: num8;
+}
+#num-nine {
+    grid-area: num9;
+}
+#multiply-cell {
+    grid-area: mult;
+}
+#num-four {
+    grid-area: num4;
+}
+#num-five {
+    grid-area: num5;
+}
+#num-six {
+    grid-area: num6;
+}
+#subtract-cell {
+    grid-area: subt;
+}
+#num-one {
+    grid-area: num1;
+}
+#num-two {
+    grid-area: num2;
+}
+#num-three {
+    grid-area: num3;
+}
+#add-cell {
+    grid-area: addt;
+}
+#num-zero {
+    grid-area: num0;
+}
+#decimal {
+    grid-area: decimal;
+}
+#equals-cell {
+    grid-area: equals;
+}
+/* End Grid */
+
+/* Cell Aesthetics */
+.numcell {
+    background-color: #562c74;
+    color: #b45b00;
+    font-size: 2rem;
+    border-style: none;
+}
+.numcell:active {
+    background-color: #dddddd;
+    color: #562c74;
+}
+.operator-cell {
+    background-color: #234b1a;
+    color: #b45b00;
+    font-size: 2rem;
+    border-style: none;
+}
+.operator-cell:active {
+    background-color: #dddddd;
+    color: #234b1a;
+}
+.ac {
+    background-color: #000;
+    color: #b45b00;
+    font-size: 2rem;
+    border-style: none;
+}
+.ac:active {
+    background-color: #dddddd;
+    color: #000;
+}
+.calc-display {
+    background-color: mintcream;
+    color: slategray;
+    font-size: 3rem;
+    text-align: right;
+    padding: 1rem;
+    border-style: none;
+}
+/* End Cell Aesthetics */
