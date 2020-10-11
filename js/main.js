@@ -81,6 +81,10 @@ function divide(num1, num2) {
     if (num1.includes('.') || num2.includes('.')) {
         return `${(parseFloat(num1) / parseFloat(num2)).toFixed(2)}`;
     } else {
+        let res = `${parseInt(num1) / parseInt(num2)}`;
+        if (res.includes('.')) {
+            return `${parseFloat(res).toFixed(2)}`
+        }
         return `${parseInt(num1) / parseInt(num2)}`;
     }
 }
