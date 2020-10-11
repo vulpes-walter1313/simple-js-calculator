@@ -1,3 +1,13 @@
+:root {
+    --num-cell-color: #000000;
+    --num-text-color: #d9ebe9;
+    --op-cell-color: #0e1821;
+    --op-text-color: #d9ebe9;
+    --ac-cell-color: #798f8c;
+    --ac-text-color: #0e1821;
+    --calc-frame-color: #44535e;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -5,11 +15,16 @@
 }
 
 html {
-    background-color: #14090C;
-    color: #FF1745;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(215, 243, 250);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
-
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1em auto .5em;
+    font-family: 'Poppins', sans-serif;
+}
 /* Grid */
 .frame {
     padding: 1em;
@@ -29,10 +44,11 @@ html {
     "num1 num2 num3 addt"
     "num0 num0 decimal equals";
     gap: 5px 5px;
-    background-color: #b45b00;
+    background-color: var(--calc-frame-color);
 }
 #result {
     grid-area: display;
+    margin-bottom: .4rem;
     
 }
 #ac-clear {
@@ -90,34 +106,34 @@ html {
 
 /* Cell Aesthetics */
 .numcell {
-    background-color: #562c74;
-    color: #b45b00;
+    background-color: var(--num-cell-color);
+    color: var(--num-text-color);
     font-size: 2rem;
     border-style: none;
 }
 .numcell:active {
-    background-color: #dddddd;
-    color: #562c74;
+    background-color: var(--num-text-color);
+    color: var(--num-cell-color);
 }
 .operator-cell {
-    background-color: #234b1a;
-    color: #b45b00;
+    background-color: var(--op-cell-color);
+    color: var(--op-text-color);
     font-size: 2rem;
     border-style: none;
 }
 .operator-cell:active {
-    background-color: #dddddd;
-    color: #234b1a;
+    background-color: var(--op-text-color);
+    color: var(--op-cell-color);
 }
 .ac {
-    background-color: #000;
-    color: #b45b00;
+    background-color: var(--ac-cell-color);
+    color: var(--ac-text-color);
     font-size: 2rem;
     border-style: none;
 }
 .ac:active {
-    background-color: #dddddd;
-    color: #000;
+    background-color: var(--ac-text-color);
+    color: var(--ac-cell-color);
 }
 .calc-display {
     background-color: mintcream;
